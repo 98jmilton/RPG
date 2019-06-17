@@ -1,3 +1,5 @@
+import pygame,sys,time,random
+
 def myPrint(t):
     typing_speed = 150 #wpm
     if t == 'cont': t='Press enter to continue...'
@@ -20,3 +22,7 @@ def parseInput(input):
     if 'quit' in outString.lower(): sys.exit()
     myPrint('-'*14)
     return outString
+
+def choosingOptions(input):
+    myPrint(('-'*14)+'\n'+'Current Options:')
+    print('\n\t'+',\n\t'.join(input.keys))     
