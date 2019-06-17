@@ -1,5 +1,6 @@
-import Player,sys,time,random,Tools,Dicts
 import pygame
+import Player,Dicts,sys,time,random
+from Tools import parseInput,myPrint
 
 # Global Variables
 player=''
