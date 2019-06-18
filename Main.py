@@ -1,5 +1,5 @@
 import Player
-from Tools import parseInput,myPrint,choosingOptions
+from Tools import parseInput,myPrint,choosingOptions,printRace
 from Lists import raceStats,mainMenu
 # Global Variables
 player=Player.Player()
@@ -14,52 +14,52 @@ def chosingRace():
     options='Race options:'
     for key in raceStats:
         options+='\n\t'+key+','
-    myPrint(options)
+    if(myPrint(options)):pass
     raceChoice = parseInput('Enter choice or type \"stats [racename]\" to see each races stats').lower().split(' ')
     if raceChoice[0].lower() == 'stats':
-        myPrint(raceStats[raceChoice[1]])
-        myPrint('cont')
+        printRace(raceChoice[1])
+        if(myPrint('cont')):pass
         raw_input()
         chosingRace()
-    elif raceChoice[0].lower() in raceStats.keys:
-        myPrint('You chose: ', raceChoice[0])
+    elif raceChoice[0].lower()== key in raceStats:
+        if(myPrint('You chose: ', raceChoice[0])):pass
         player.race=raceChoice[0]
-        myPrint('cont')             
+        if(myPrint('cont')):pass             
         raw_input()
     else:
-        myPrint('\nError: check input')
+        if(myPrint('\nError: check input')):pass
         chosingRace()
-
+ 
 def chosingClass():
-    myPrint('Class options:\n\t'+',\n\t'.join(classStats.keys))
+    if(myPrint('Class options:\n\t'+',\n\t'.join(classStats.keys['Name']))):pass
     classChoice = parseInput('Enter choice or type \"stats [classname]\" to see each classs stats').lower().split(' ')
     if classChoice[0] == 'stats':
-        myPrint(classStats[classChoice[1]])
-        myPrint('cont')
+        if(myPrint(classStats[classChoice[1]])):pass
+        if(myPrint('cont')):pass
         raw_input()
         chosingClass()
     elif classChoice[0] in classStats.keys:
-        myPrint('You chose: ', classChoice[0])
+        if(myPrint('You chose: ', classChoice[0])):pass
         player.className=classChoice[0]
-        myPrint('cont')             
+        if(myPrint('cont')):pass             
         raw_input()
     else:
-        myPrint('\nError: check input')
+        if(myPrint('\nError: check input')):pass
         chosingClass()
 
 def playerDetails():
     raceChoice()
-    print(player)
+    if(myPrint(player)):pass
 
 
 def editPlayer():
-    myPrint('Edit player details:')
+    if(myPrint('Edit player details:')):pass
     chosingRace()
     pass
 
 def error():
-    myPrint("ERROR\nWell that wasnt meant to happen...")
-    myPrint('cont')
+    if(myPrint("ERROR\nWell that wasnt meant to happen...")):pass
+    if(myPrint('cont')):pass
     choosingOptions(currentOptionList)
 
 if __name__ == '__main__':

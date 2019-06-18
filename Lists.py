@@ -1,6 +1,7 @@
 #Each race has the following stats, Strength (STR), Athletics (ATH), Wisdom (WIS), Charisma (CHAR), Base health (HP)
 raceStats={
-    'Human': {
+    'human': {
+        'Name': 'Human',
         'Description':"TODO",
         'STR':6,
         'ATH':6,
@@ -8,7 +9,8 @@ raceStats={
         'CHAR':6,
         'HP':6
     },
-    'Dwarf': {
+    'dwarf': {
+        'Name': 'Dwarf',
         'Description':"TODO",
         'STR':9,
         'ATH':3,
@@ -16,7 +18,8 @@ raceStats={
         'CHAR':5,
         'HP':9
     },
-    'Elf': {
+    'elf': {
+        'Name': 'Elf',
         'Description':"TODO",
         'STR':4,
         'ATH':8,
@@ -24,7 +27,8 @@ raceStats={
         'CHAR':7,
         'HP':5
     },
-    'Drow': {
+    'drow': {
+        'Name': 'Drow',
         'Description':"TODO",
         'STR':4,
         'ATH':9,
@@ -32,7 +36,8 @@ raceStats={
         'CHAR':4,
         'HP':6
     },
-    'Gnome': {
+    'gnome': {
+        'Name': 'Gnome',
         'Description':"TODO",
         'STR':2,
         'ATH':8,

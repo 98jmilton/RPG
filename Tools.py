@@ -1,9 +1,10 @@
 import pygame,sys,time,random
+from Lists import raceStats
 
 def myPrint(t):
     typing_speed = 150 #wpm
     if t == 'cont': t='Press enter to continue...'
-
+    if t == '-':t=('-'*14)
     pygame.mixer.init()
     pygame.mixer.music.load('key.mp3')                        
     pygame.mixer.music.play()
@@ -14,15 +15,20 @@ def myPrint(t):
         time.sleep(random.random()*10.0/typing_speed)
     pygame.mixer.music.stop()
     print ''
+    return True #Continues on finish
 
 def parseInput(input):
-    myPrint(('-'*14)+'\n'+input)
+    if(myPrint('-')):pass
+    if(myPrint(input)):pass
     inputString = raw_input('=>')
     outString = inputString[:-1]
     if 'quit' in outString.lower(): sys.exit()
-    myPrint('-'*14)
+    if(myPrint('-')):pass
     return outString
 
 def choosingOptions(input):
-    myPrint(('-'*14)+'\n'+'Current Options:')
-    print('\n\t'+',\n\t'.join(input.keys))     
+    if(myPrint(('-'*14)+'\n'+'Current Options:')):pass
+    myPrint('\n\t'+',\n\t'.join(input.keys))     
+
+def printRace(input):
+    pass
