@@ -27,8 +27,11 @@ def parseInput(input):
     return outString
 
 def choosingOptions(input):
-    if(myPrint(('-'*14)+'\n'+'Current Options:')):pass
+    if(myPrint('Current Options:')):pass
     myPrint('\n\t'+',\n\t'.join(input.keys))     
 
 def printRace(input):
+    pass
+
+def printClass(input):
     pass
