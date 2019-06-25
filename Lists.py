@@ -2,7 +2,7 @@
 raceStats={
     'human': {
         'Name': 'Human',
-        'Description':"TODO",
+        'Description':'TODO',
         'STR':6,
         'ATH':6,
         'WIS':6,
@@ -11,7 +11,7 @@ raceStats={
     },
     'dwarf': {
         'Name': 'Dwarf',
-        'Description':"TODO",
+        'Description':'TODO',
         'STR':9,
         'ATH':3,
         'WIS':4,
@@ -20,7 +20,7 @@ raceStats={
     },
     'elf': {
         'Name': 'Elf',
-        'Description':"TODO",
+        'Description':'TODO',
         'STR':4,
         'ATH':8,
         'WIS':6,
@@ -29,7 +29,7 @@ raceStats={
     },
     'drow': {
         'Name': 'Drow',
-        'Description':"TODO",
+        'Description':'TODO',
         'STR':4,
         'ATH':9,
         'WIS':7,
@@ -38,7 +38,7 @@ raceStats={
     },
     'gnome': {
         'Name': 'Gnome',
-        'Description':"TODO",
+        'Description':'TODO',
         'STR':2,
         'ATH':8,
         'WIS':9,
@@ -48,6 +48,9 @@ raceStats={
 }
 
 stats=('STR','ATH','WIS','CHAR','HP')
+
+#One-handed,Ranged,Two-handed,Magic,Shield 
+#OneHand,Rngd,TwoHand,Magic,Shield,Instrument
 classStats={
     'bard':{ #++CHAR,+ATH,HP+0,-WIS,--STR
         'Name':'Bard',
@@ -55,7 +58,9 @@ classStats={
         'ATH':2,
         'WIS':-2,
         'CHAR':4,
-        'HP':0
+        'HP':0,
+        'ArmorType':'Medium',``
+        'WeaponProf'=('OneHand','Instrument')
     },
     'rogue':{ #++ATH,+CHAR,HP+0,-STR,--WIS
         'Name':'Rogue',
@@ -64,6 +69,8 @@ classStats={
         'WIS':-4,
         'CHAR':2,
         'HP':0
+        'ArmorType':'Light',``
+        'WeaponProf'=('OneHand','Rngd'):
     },
     'warrior':{ #++STR,+ATH,++HP,-CHAR,--WIS
         'Name':'Warrior',
@@ -72,6 +79,8 @@ classStats={
         'WIS':-4,
         'CHAR':-2,
         'HP':1
+        'ArmorType':'Medium',``
+        'WeaponProf'=('OneHand','Shield')
     },
     'mage':{ #++WIS,+CHAR,--HP,-ATH,--STR
         'Name':'Mage',
@@ -80,6 +89,8 @@ classStats={
         'WIS':4,
         'CHAR':2,
         'HP':-2
+        'ArmorType':'Light',``
+        'WeaponProf':('OneHand','Magic')
     },
     'tank':{#++STR,+HP,WIS,-CHAR,--ATH
         'Name':'Tank',
@@ -88,6 +99,8 @@ classStats={
         'WIS':0,
         'CHAR':-2,
         'HP':3
+        'ArmorType':'Heavy',``
+        'WeaponProf'=('OneHand','TwoHand')
     }
 }
 
