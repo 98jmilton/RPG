@@ -90,7 +90,7 @@ classStats={
         'CHAR':2,
         'HP':-2
         'ArmorType':'Light',``
-        'WeaponProf':('OneHand','Magic')
+        'WeaponProf'=('OneHand','Magic')
     },
     'tank':{#++STR,+HP,WIS,-CHAR,--ATH
         'Name':'Tank',
