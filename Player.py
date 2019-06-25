@@ -1,5 +1,5 @@
 from Tools import myPrint
-
+from Lists import raceStats
 class Player:
 
     # Initializer / Instance Attributes
@@ -36,7 +36,12 @@ class Player:
     @race.setter
     def race(self,_race):
         self.race=_race  
- 
+        self.str=raceStats[_race]['STR']
+        self.ath=raceStats[_race]['ATH']
+        self.wis=raceStats[_race]['WIS']
+        self.char=raceStats[_race]['CHAR']
+        self.hp=raceStats[_race]['HP']
+
     @property
     def classType(self):
         return classType
@@ -44,6 +49,7 @@ class Player:
     @classType.setter
     def classType(self,_classType):
         self.classType=_classType
+
 
     @property
     def armorType(self):

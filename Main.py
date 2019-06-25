@@ -23,6 +23,8 @@ def chosingRace():
     #Only choice entered
     elif raceChoice[0] in raceStats:
         player.race=raceChoice[0]
+        myPrint('You chose:')
+        printRace(player.race)
     # Input has no matches
     else:
         if(myPrint('\nError: check input')):pass

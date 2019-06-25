@@ -37,7 +37,6 @@ def printRace(input):
     for stat in stats:
         output+='\n\t'+stat+': '+str(race[stat])
     myPrint(output)
-    myPrint('cont')
     myPrint('-')
 
 def printClass(input):
