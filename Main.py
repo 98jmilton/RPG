@@ -1,6 +1,6 @@
 import Player
 from Tools import parseInput,myPrint,choosingOptions,printRace
-from Lists import raceStats,classes,classStats,mainMenu
+from Lists import raceStats,stats,classStats,mainMenu
 # Global Variables
 player=Player.Player()
 currentOptionList=''

@@ -1,5 +1,5 @@
 import pygame,sys,time,random
-from Lists import raceStats
+from Lists import raceStats,stats,classStats
 
 def myPrint(t):
     typing_speed = 150 #wpm
@@ -31,7 +31,14 @@ def choosingOptions(input):
     myPrint('\n\t'+',\n\t'.join(input.keys))     
 
 def printRace(input):
-    pass
+    race=raceStats[input]
+    output='Race name: '+race['Name']
+    output+='\nDescription: '+race['Description']
+    for stat in stats:
+        output+='\n\t'+stat+': '+str(race[stat])
+    myPrint(output)
+    myPrint('cont')
+    myPrint('-')
 
 def printClass(input):
     pass

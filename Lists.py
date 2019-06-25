@@ -47,7 +47,7 @@ raceStats={
     },
 }
 
-classes=('STR','ATH','WIS','CHAR','HP')
+stats=('STR','ATH','WIS','CHAR','HP')
 classStats={
     'bard':{ #++CHAR,+ATH,HP+0,-WIS,--STR
         'Name':'Bard',
