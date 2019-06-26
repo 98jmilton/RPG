@@ -1,5 +1,6 @@
 import pygame,sys,time,random
 from Lists import raceStats,stats,classStats
+from Main import player
 
 def myPrint(t):
     typing_speed = 150 #wpm
@@ -28,7 +29,19 @@ def parseInput(input):
 
 def choosingOptions(input):
     if(myPrint('Current Options:')):pass
-    myPrint('\n\t'+',\n\t'.join(input.keys))     
+    myPrint('\n\t'+',\n\t'.join(input.keys())+'\t\n')     
+    choice=parseInput('Enter Choice').lower()
+    result=''
+    for key in input:
+        if choice.lower() in key.lower():
+            result = input[key]
+    if result=='':
+        myPrint('\nError: check input')
+    else:
+        exec(result)
+
+def playerDetails():
+    if(myPrint(player)):pass
 
 def printRace(input):
     race=raceStats[input]

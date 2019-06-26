@@ -30,7 +30,6 @@ def chosingRace():
         if(myPrint('\nError: check input')):pass
         chosingRace()
  
-
 def chosingClass():
     options='Race options:'
     for key in classStats:
@@ -59,7 +58,7 @@ def editPlayer():
     pass
 
 def error():
-    if(myPrint("ERROR\nWell that wasnt meant to happen...")):pass
+    if(myPrint('*'*4+'ERROR'+'*'*4+'\nWell that wasnt meant to happen...')):pass
     if(myPrint('cont')):pass
     choosingOptions(currentOptionList)
 

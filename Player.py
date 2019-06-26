@@ -1,5 +1,5 @@
 from Tools import myPrint
-from Lists import raceStats
+from Lists import raceStats,classStats
 class Player:
 
     # Initializer / Instance Attributes
@@ -35,7 +35,7 @@ class Player:
 
     @race.setter
     def race(self,_race):
-        self.race=_race  
+        self.race=raceStats[_race]['name'] 
         self.str=raceStats[_race]['STR']
         self.ath=raceStats[_race]['ATH']
         self.wis=raceStats[_race]['WIS']
@@ -48,7 +48,14 @@ class Player:
 
     @classType.setter
     def classType(self,_classType):
-        self.classType=_classType
+        self.classType = classStats[_classType]['Name']
+        self.armorType = classStats[_classType]['ArmorType']
+        self.weaponProf = classStats[_classType]['WeaponProf']#Tuple
+        self.str+=classStats[_classType]['STR']
+        self.ath+=classStats[_classType]['ATH']
+        self.wis+=classStats[_classType]['WIS']
+        self.char+=classStats[_classType]['CHAR']
+        self.hp+=10*classStats[_classType]['HP']            
 
 
     @property
