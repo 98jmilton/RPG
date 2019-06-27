@@ -1,5 +1,3 @@
-from Tools import myPrint
-from Lists import raceStats,classStats
 class Player:
 
     # Initializer / Instance Attributes
@@ -15,7 +13,6 @@ class Player:
         self.char=0
         self.hp=0
         
-
     def __str__():
         myPrint(('-'*14)+'\n'+'Player Details:')
         myPrint("Name: "+name+"\tRace: "+race+"\tCurrent HP: "+hp+"\tClass: "+classType+"\tArmor proficiency: "+armorType+"\tWeapon proficiency: "+weaponProf+"\t")
@@ -113,5 +110,4 @@ class Player:
     @hp.setter
     def hp(self,_hp):
         self.hp=_hp 
-    
     

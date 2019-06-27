@@ -1,6 +1,5 @@
 import pygame,sys,time,random
-from Lists import raceStats,stats,classStats
-from Main import player
+from Lists import *
 
 def myPrint(t):
     typing_speed = 150 #wpm
@@ -40,17 +39,8 @@ def choosingOptions(input):
     else:
         exec(result)
 
-def playerDetails():
-    if(myPrint(player)):pass
 
-def printRace(input):
-    race=raceStats[input]
-    output='Race name: '+race['Name']
-    output+='\nDescription: '+race['Description']
-    for stat in stats:
-        output+='\n\t'+stat+': '+str(race[stat])
-    myPrint(output)
-    myPrint('-')
-
-def printClass(input):
-    pass
+def error():
+    if(myPrint('*'*4+'ERROR'+'*'*4+'\nWell that wasnt meant to happen...')):pass
+    if(myPrint('cont')):pass
+    choosingOptions(currentOptionList)

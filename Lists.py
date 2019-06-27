@@ -44,7 +44,7 @@ raceStats={
         'WIS':9,
         'CHAR':7,
         'HP':40  
-    },
+    }
 }
 
 stats=('STR','ATH','WIS','CHAR','HP')
@@ -54,58 +54,63 @@ stats=('STR','ATH','WIS','CHAR','HP')
 classStats={
     'bard':{ #++CHAR,+ATH,HP+0,-WIS,--STR
         'Name':'Bard',
+        'Description':'TODO',
         'STR':-4,
         'ATH':2,
         'WIS':-2,
         'CHAR':4,
         'HP':0,
-        'ArmorType':'Medium',``
-        'WeaponProf'=('OneHand','Instrument')
+        'ArmorType':'Medium',
+        'WeaponProf':('OneHand','Instrument')
     },
     'rogue':{ #++ATH,+CHAR,HP+0,-STR,--WIS
         'Name':'Rogue',
+        'Description':'TODO',
         'STR':-2,
         'ATH':4,
         'WIS':-4,
         'CHAR':2,
-        'HP':0
-        'ArmorType':'Light',``
-        'WeaponProf'=('OneHand','Rngd'):
+        'HP':0,
+        'ArmorType':'Light',
+        'WeaponProf':('OneHand','Rngd')
     },
     'warrior':{ #++STR,+ATH,++HP,-CHAR,--WIS
         'Name':'Warrior',
+        'Description':'TODO',
         'STR':4,
         'ATH':2,
         'WIS':-4,
         'CHAR':-2,
-        'HP':1
-        'ArmorType':'Medium',``
-        'WeaponProf'=('OneHand','Shield')
+        'HP':1,
+        'ArmorType':'Medium',
+        'WeaponProf':('OneHand','Shield')
     },
     'mage':{ #++WIS,+CHAR,--HP,-ATH,--STR
         'Name':'Mage',
+        'Description':'TODO',
         'STR':-4,
         'ATH':-2,
         'WIS':4,
         'CHAR':2,
-        'HP':-2
-        'ArmorType':'Light',``
-        'WeaponProf'=('OneHand','Magic')
+        'HP':-2,
+        'ArmorType':'Light',
+        'WeaponProf':('OneHand','Magic')
     },
     'tank':{#++STR,+HP,WIS,-CHAR,--ATH
         'Name':'Tank',
+        'Description':'TODO',
         'STR':4,
         'ATH':-4,
         'WIS':0,
         'CHAR':-2,
-        'HP':3
-        'ArmorType':'Heavy',``
-        'WeaponProf'=('OneHand','TwoHand')
+        'HP':3,
+        'ArmorType':'Heavy',
+        'WeaponProf':('OneHand','TwoHand')
     }
 }
 
 mainMenu={
-    'My Character':'playerDetails',
-    'Edit Character':'editPlayer',
-    'Random Encounter':'error'
+    'My Character':'playerDetails()',
+    'Edit Character':'editPlayer()',
+    'Random Encounter':'error()'
     }
