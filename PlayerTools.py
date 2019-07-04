@@ -40,7 +40,7 @@ def chosingClass():
     elif classChoice[0] in classStats:
         player.classType=classChoice[0]
         myPrint('You chose:')
-        printRace(player.classType)
+        printClass(player.classType)
     # Input has no matches
     else:
         error()
@@ -64,4 +64,10 @@ def printRace(input):
     myPrint('-')
 
 def printClass(input):
-    pass
+    className=classStats[input]
+    output='Race name: '+className['Name']
+    output+='\nDescription: '+className['Description']
+    for stat in stats:
+        output+='\n\t'+stat+': '+str(race[stat])
+    myPrint(output)
+    myPrint('-')
